@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/task', function(Request $request) {
     $task = Task::create([
         'name' => $request->input('name'),
-        'display_order' => Task::count() + 1, // This ensures the display order starts at 1
+        'display_order' => Task::count() + 1, 
     ]);
 
     if ($request->has('comment')) {
